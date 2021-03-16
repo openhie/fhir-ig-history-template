@@ -17,7 +17,8 @@
   <!-- Project extras -->
   <link href="assets-hist/css/project.css" rel="stylesheet"/>
   <link href="assets-hist/css/pygments-manni.css" rel="stylesheet"/>
-	<link href="jquery-ui.css" rel="stylesheet"/>
+   <link href="jquery-ui.css" rel="stylesheet"/>  
+  <link rel="stylesheet" href="assets/css/openhie.css"/>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets-hist/ico/apple-touch-icon-144-precomposed.png"/>
@@ -30,15 +31,20 @@
   <link href="history.css" rel="stylesheet"/>
 
 </head>
-<body>
+<body onload="document.body.style.opacity='1'">
 
  <div id="segment-header" class="segment">  <!-- segment-header -->
   <div class="container">  <!-- container -->
-   <a id="logo" no-external="true" href="http://hl7.org/fhir"><img alt="logo fhir" src="assets-hist/images/fhir-logo-www.png"/></a>
-<div>
-<a id="hl7-logo" no-external="true" href="http://www.hl7.org">
-     <img alt="visit the hl7 website" width="42" height="50" src="assets-hist/images/hl7-logo.png"/>
+  <div id="project-nav">
+    <a no-external="true" id="project-logo" href="http://ohie.org">
+      <img src="assets/images/home.png" alt="Project home" height="71"/>
     </a>
+  </div>
+
+  <!-- Right logo - for example the FHIR logo -->
+  <!-- Make sure you have authorization to use the FHIR logo -->
+  <div id="family-nav">
+    <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fire.png" alt="FHIR website" height="70"/> </a>
    </div>
    <div id="ig-status" style="font-size:24px;padding-top: 20px;">
 <b id="ig-title">[%title%]</b>
