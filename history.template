@@ -30,6 +30,19 @@
   <script type="application/javascript" src="http://hl7.org/fhir/history.js"> </script>
   <link href="history.css" rel="stylesheet"/>
 
+  <!--disable the auto-added icon for external links, if it comes with the template-->
+  <!--keeping the #history-data line will apply this to the table -->
+  <!--removing the #history-data line will apply this to the entire page-->
+  <style>
+   #history-data 
+    a[href^='http://']:not([no-external^='true']):after, a[href^='https://']:not([no-external^='true']):after {
+      content: none !important;
+      display: inline-block;
+      text-decoration: none;
+      padding-left: 3px;
+    }
+  </style>   
+
 </head>
 <body onload="document.body.style.opacity='1'">
 
